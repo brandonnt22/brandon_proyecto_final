@@ -249,7 +249,7 @@ https://github.com/brandonnt22
 
 Agregar aquí el enlace de GitHub Pages una vez publicada la página:
 
-https://brandonnt22.github.io/
+https://brandonnt22.github.io/brandon_proyecto_final/
 
 ---
 
