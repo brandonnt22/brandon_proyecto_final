@@ -241,7 +241,7 @@ en cualquier navegador moderno.
 
 Repositorio del proyecto:
 
-https://github.com/brandonnt22
+https://github.com/brandonnt22/brandon_proyecto_final.git
 
 ---
 
