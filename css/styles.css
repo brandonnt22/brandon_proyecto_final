@@ -1,0 +1,619 @@
+/* =======================================
+   RESET GENERAL
+======================================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-color: #f8f9fa;
+
+    color: #1b4332;
+
+    line-height: 1.7;
+
+    min-height: 100vh;
+}
+
+/* =======================================
+   HEADER
+======================================= */
+
+header{
+
+    width: 100%;
+
+    background: linear-gradient(
+        135deg,
+        #1b4332,
+        #2d6a4f
+    );
+
+    color: white;
+}
+
+.hero{
+
+    position: relative;
+
+    width: 100%;
+}
+
+.hero img{
+
+    width: 100%;
+
+    height: 450px;
+
+    object-fit: cover;
+
+    display: block;
+
+    filter: brightness(45%);
+}
+
+.hero-texto{
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    width: 90%;
+}
+
+.hero-texto h1{
+
+    font-size: 3rem;
+
+    margin-bottom: 20px;
+
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-texto p{
+
+    font-size: 1.2rem;
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+/* =======================================
+   MENÚ
+======================================= */
+
+.menu{
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    padding: 15px;
+
+    background-color: #1b4332;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.menu button{
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    color: #1b4332;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.menu button:hover{
+
+    background-color: #95d5b2;
+
+    transform: translateY(-3px);
+}
+
+/* =======================================
+   MAIN
+======================================= */
+
+main{
+
+    width: 95%;
+
+    max-width: 1300px;
+
+    margin: 40px auto;
+}
+
+/* =======================================
+   TARJETAS
+======================================= */
+
+.tarjeta{
+
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+    animation: aparecer 0.8s ease;
+}
+
+.tarjeta h2{
+
+    color: #1b4332;
+
+    margin-bottom: 15px;
+
+    border-left: 6px solid #40916c;
+
+    padding-left: 12px;
+}
+
+.tarjeta h3{
+
+    color: #2d6a4f;
+
+    margin-bottom: 10px;
+}
+
+/* =======================================
+   SECCIONES
+======================================= */
+
+.contenido{
+
+    margin-top: 30px;
+}
+
+.oculto{
+
+    display: none;
+}
+
+/* =======================================
+   IMÁGENES
+======================================= */
+
+.imagen-seccion{
+
+    width: 100%;
+
+    max-height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* =======================================
+   FORMULARIOS
+======================================= */
+
+form{
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+label{
+
+    font-weight: 600;
+}
+
+input{
+
+    padding: 12px;
+
+    border: 2px solid #d8f3dc;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input:focus{
+
+    border-color: #40916c;
+}
+
+/* =======================================
+   BOTONES FORMULARIO
+======================================= */
+
+.botones{
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 15px;
+
+    flex-wrap: wrap;
+}
+
+.botones button{
+
+    flex: 1;
+
+    min-width: 180px;
+
+    border: none;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#calcularTransporte,
+#calcularCompras,
+#calcularEscasez{
+
+    background-color: #2d6a4f;
+
+    color: white;
+}
+
+#limpiarTransporte,
+#limpiarCompras,
+#limpiarEscasez{
+
+    background-color: #adb5bd;
+
+    color: white;
+}
+
+.botones button:hover{
+
+    transform: scale(1.03);
+}
+
+/* =======================================
+   RESULTADOS
+======================================= */
+
+.resultado{
+
+    min-height: 80px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    margin-top: 15px;
+
+    background-color: #f8f9fa;
+
+    border-left: 6px solid #2d6a4f;
+
+    font-weight: 500;
+}
+
+/* RESULTADOS DINÁMICOS */
+
+.normal{
+
+    background-color: #d8f3dc;
+
+    color: #1b4332;
+
+    border-left: 8px solid #2d6a4f;
+}
+
+.advertencia{
+
+    background-color: #fff3bf;
+
+    color: #664d03;
+
+    border-left: 8px solid #f4a261;
+}
+
+.critico{
+
+    background-color: #ffccd5;
+
+    color: #9d0208;
+
+    border-left: 8px solid #d90429;
+}
+
+/* =======================================
+   TABLAS
+======================================= */
+
+table{
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 15px;
+}
+
+table th{
+
+    background-color: #2d6a4f;
+
+    color: white;
+
+    padding: 12px;
+}
+
+table td{
+
+    padding: 12px;
+
+    border: 1px solid #dee2e6;
+}
+
+table tr:nth-child(even){
+
+    background-color: #f8f9fa;
+}
+
+/* =======================================
+   FOOTER
+======================================= */
+
+footer{
+
+    background-color: #1b4332;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    margin-top: 40px;
+}
+
+footer h3{
+
+    margin-bottom: 15px;
+}
+
+footer p{
+
+    margin: 10px 0;
+}
+
+footer a{
+
+    color: #95d5b2;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+footer a:hover{
+
+    text-decoration: underline;
+}
+
+/* =======================================
+   ANIMACIONES
+======================================= */
+
+@keyframes aparecer{
+
+    from{
+
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+/* =======================================
+   TABLET
+======================================= */
+
+@media screen and (max-width: 900px){
+
+    body{
+
+        background-color: #d8f3dc;
+
+        color: #081c15;
+    }
+
+    header{
+
+        background: linear-gradient(
+            135deg,
+            #52b788,
+            #74c69d
+        );
+    }
+
+    .menu{
+
+        background-color: #52b788;
+    }
+
+    .menu button{
+
+        background-color: white;
+
+        color: #081c15;
+    }
+
+    .tarjeta{
+
+        background-color: #ffffff;
+    }
+
+    .tarjeta h2{
+
+        color: #2d6a4f;
+    }
+
+    footer{
+
+        background-color: #40916c;
+    }
+
+    .resultado{
+
+        background-color: white;
+    }
+}
+
+/* =======================================
+   CELULAR
+======================================= */
+
+@media screen and (max-width: 600px){
+
+    body{
+
+        background-color: #006d77;
+
+        color: #edf6f9;
+    }
+
+    .hero img{
+
+        height: 300px;
+    }
+
+    .hero-texto h1{
+
+        font-size: 1.8rem;
+    }
+
+    .hero-texto p{
+
+        font-size: 1rem;
+    }
+
+    .menu{
+
+        background-color: #023047;
+
+        flex-direction: column;
+    }
+
+    .menu button{
+
+        width: 100%;
+
+        background-color: #219ebc;
+
+        color: white;
+    }
+
+    .tarjeta{
+
+        background-color: #ffffff;
+
+        color: #023047;
+    }
+
+    .tarjeta h2{
+
+        color: #023047;
+    }
+
+    .botones{
+
+        flex-direction: column;
+    }
+
+    .botones button{
+
+        width: 100%;
+    }
+
+    table{
+
+        font-size: 14px;
+    }
+
+    footer{
+
+        background-color: #023047;
+    }
+}
+
+/* =======================================
+   CORRECCIÓN DE SCROLL
+======================================= */
+
+.contenido{
+
+    scroll-margin-top: 500px;
+
+}
+
+.resultado{
+
+    scroll-margin-top: 500px;
+
+}

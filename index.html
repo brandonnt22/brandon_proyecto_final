@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Simulador Web de Abastecimiento, Precios y Consumo Familiar
+    </title>
+
+    <link rel="stylesheet"
+        href="css/styles.css">
+
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header>
+
+        <div class="hero">
+
+            <img src="img/banner.jpg"
+                alt="Banner principal">
+
+            <div class="hero-texto">
+
+                <h1>
+                    Simulador Web de Abastecimiento,
+                    Precios y Consumo Familiar
+                </h1>
+
+                <p>
+                    Proyecto desarrollado para analizar
+                    situaciones reales relacionadas con
+                    transporte, compras familiares y
+                    abastecimiento durante contextos de crisis.
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- NAVEGACIÓN -->
+
+    <nav class="menu">
+
+        <button id="btnTransporte">
+            Caso C - Transporte
+        </button>
+
+        <button id="btnCompras">
+            Caso D - Compras Familiares
+        </button>
+
+        <button id="btnEscasez">
+            Caso E - Rumor de Escasez
+        </button>
+
+    </nav>
+
+    <main>
+
+        <!-- INICIO -->
+
+        <section class="tarjeta">
+
+            <h2>
+                Inicio
+            </h2>
+
+            <p>
+                Este simulador permite comprender cómo
+                diferentes situaciones pueden afectar
+                la economía familiar y el abastecimiento.
+                Los modelos utilizados son matemáticos
+                y tienen fines educativos.
+            </p>
+
+        </section>
+
+        <!-- CONTEXTO -->
+
+        <section class="tarjeta">
+
+            <h2>
+                Contexto del Problema
+            </h2>
+
+            <p>
+                En la actualidad pueden presentarse
+                problemas relacionados con el transporte,
+                el aumento de precios y los rumores de
+                escasez que afectan directamente a las
+                familias. Este proyecto busca representar
+                dichas situaciones mediante simuladores
+                interactivos desarrollados con HTML, CSS
+                y JavaScript.
+            </p>
+
+        </section>
+
+        <!-- CASO C -->
+
+        <section id="seccionTransporte"
+            class="contenido">
+
+            <h2>
+                Caso C: Simulador de Costo de Transporte
+            </h2>
+
+            <img src="img/transporte.jpg"
+                alt="Transporte"
+                class="imagen-seccion">
+
+            <article class="tarjeta">
+
+                <h3>
+                    Contexto
+                </h3>
+
+                <p>
+                    Cuando existen bloqueos o rutas
+                    alternativas, los conductores deben
+                    recorrer más kilómetros, aumentando
+                    significativamente los costos de transporte.
+                </p>
+
+            </article>
+
+            <article class="tarjeta">
+
+                <h3>
+                    Algoritmo Utilizado
+                </h3>
+
+                <p>
+                    Se calcula el costo normal y el costo
+                    con desvío utilizando la distancia
+                    recorrida y el costo por kilómetro.
+                </p>
+
+            </article>
+
+            <article class="tarjeta">
+
+                <h3>
+                    Simulador
+                </h3>
+
+                <form>
+
+                    <label>
+                        Distancia normal (km)
+                    </label>
+
+                    <input type="number"
+                        id="distanciaNormal">
+
+                    <label>
+                        Distancia con desvío (km)
+                    </label>
+
+                    <input type="number"
+                        id="distanciaDesvio">
+
+                    <label>
+                        Costo por kilómetro (Bs)
+                    </label>
+
+                    <input type="number"
+                        id="costoKm">
+
+                    <label>
+                        Viajes por semana
+                    </label>
+
+                    <input type="number"
+                        id="viajesSemana">
+
+                    <div class="botones">
+
+                        <button type="button"
+                            id="calcularTransporte">
+
+                            Calcular
+
+                        </button>
+
+                        <button type="button"
+                            id="limpiarTransporte">
+
+                            Limpiar
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </article>
+
+            <article class="tarjeta">
+
+                <h3>
+                    Resultados
+                </h3>
+
+                <div id="resultadoTransporte"
+                    class="resultado">
+
+                </div>
+
+            </article>
+
+            <article class="tarjeta">
+
+                <h3>
+                    Caso de Estudio
+                </h3>
+
+                <table>
+
+                    <tr>
+                        <th>Dato</th>
+                        <th>Valor</th>
+                    </tr>
+
+                    <tr>
+                        <td>Distancia normal</td>
+                        <td>10 km</td>
+                    </tr>
+
+                    <tr>
+                        <td>Distancia con desvío</td>
+                        <td>16 km</td>
+                    </tr>
+
+                    <tr>
+                        <td>Costo por km</td>
+                        <td>2 Bs</td>
+                    </tr>
+
+                    <tr>
+                        <td>Viajes por semana</td>
+                        <td>5</td>
+                    </tr>
+
+                </table>
+
+            </article>
+
+        </section>
+
+        <!-- CASO D -->
+
+        <section id="seccionCompras"
+            class="contenido oculto">
+
+            <h2>
+                Caso D: Simulador de Compras Familiares
+            </h2>
+
+            <img src="img/compras.jpg"
+                alt="Compras"
+                class="imagen-seccion">
+
+            <article class="tarjeta">
+
+                <h3>
+                    Contexto
+                </h3>
+
+                <p>
+                    Las familias cuentan con presupuestos
+                    limitados y deben evaluar si sus ingresos
+                    alcanzan para cubrir sus necesidades.
+                </p>
+
+            </article>
+
+            <article class="tarjeta">
+
+                <h3>
+                    Algoritmo Utilizado
+                </h3>
+
+                <p>
+                    Se calcula el total de compra y se
+                    compara con el presupuesto disponible.
+                </p>
+
+            </article>
+
+            <article class="tarjeta">
+
+                <h3>
+                    Simulador
+                </h3>
+
+                <form>
+
+                    <label>
+                        Presupuesto familiar (Bs)
+                    </label>
+
+                    <input type="number"
+                        id="presupuesto">
+
+                    <label>
+                        Nombre del producto
+                    </label>
+
+                    <input type="text"
+                        id="producto">
+
+                    <label>
+                        Precio del producto (Bs)
+                    </label>
+
+                    <input type="number"
+                        id="precio">
+
+                    <label>
+                        Cantidad
+                    </label>
+
+                    <input type="number"
+                        id="cantidad">
+
+                    <div class="botones">
+
+                        <button type="button"
+                            id="calcularCompras">
+
+                            Calcular
+
+                        </button>
+
+                        <button type="button"
+                            id="limpiarCompras">
+
+                            Limpiar
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </article>
+
+            <article class="tarjeta">
+
+                <h3>
+                    Resultados
+                </h3>
+
+                <div id="resultadoCompras"
+                    class="resultado">
+
+                </div>
+
+            </article>
+
+            <article class="tarjeta">
+
+                <h3>
+                    Caso de Estudio
+                </h3>
+
+                <table>
+
+                    <tr>
+                        <th>Dato</th>
+                        <th>Valor</th>
+                    </tr>
+
+                    <tr>
+                        <td>Presupuesto</td>
+                        <td>500 Bs</td>
+                    </tr>
+
+                    <tr>
+                        <td>Total compra</td>
+                        <td>580 Bs</td>
+                    </tr>
+
+                </table>
+
+            </article>
+
+        </section>
+
+        <!-- CASO E -->
+
+        <section id="seccionEscasez"
+            class="contenido oculto">
+
+            <h2>
+                Caso E: Simulador de Rumor de Escasez
+            </h2>
+
+            <img src="img/escasez.jpg"
+                alt="Escasez"
+                class="imagen-seccion">
+
+            <article class="tarjeta">
+
+                <h3>
+                    Contexto
+                </h3>
+
+                <p>
+                    Cuando existen rumores de escasez,
+                    muchas personas compran más de lo
+                    habitual provocando problemas de
+                    abastecimiento.
+                </p>
+
+            </article>
+
+            <article class="tarjeta">
+
+                <h3>
+                    Algoritmo Utilizado
+                </h3>
+
+                <p>
+                    Se calcula la nueva demanda a partir
+                    del porcentaje de incremento generado
+                    por el rumor.
+                </p>
+
+            </article>
+
+            <article class="tarjeta">
+
+                <h3>
+                    Simulador
+                </h3>
+
+                <form>
+
+                    <label>
+                        Demanda normal
+                    </label>
+
+                    <input type="number"
+                        id="demanda">
+
+                    <label>
+                        Porcentaje de aumento (%)
+                    </label>
+
+                    <input type="number"
+                        id="porcentaje">
+
+                    <label>
+                        Stock disponible
+                    </label>
+
+                    <input type="number"
+                        id="stock">
+
+                    <label>
+                        Número de familias
+                    </label>
+
+                    <input type="number"
+                        id="familias">
+
+                    <div class="botones">
+
+                        <button type="button"
+                            id="calcularEscasez">
+
+                            Calcular
+
+                        </button>
+
+                        <button type="button"
+                            id="limpiarEscasez">
+
+                            Limpiar
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </article>
+
+            <article class="tarjeta">
+
+                <h3>
+                    Resultados
+                </h3>
+
+                <div id="resultadoEscasez"
+                    class="resultado">
+
+                </div>
+
+            </article>
+
+            <article class="tarjeta">
+
+                <h3>
+                    Caso de Estudio
+                </h3>
+
+                <table>
+
+                    <tr>
+                        <th>Dato</th>
+                        <th>Valor</th>
+                    </tr>
+
+                    <tr>
+                        <td>Demanda normal</td>
+                        <td>100</td>
+                    </tr>
+
+                    <tr>
+                        <td>Aumento</td>
+                        <td>40%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Stock disponible</td>
+                        <td>120</td>
+                    </tr>
+
+                </table>
+
+            </article>
+
+        </section>
+
+        <!-- CONCLUSIONES -->
+
+        <section class="tarjeta">
+
+            <h2>
+                Conclusiones
+            </h2>
+
+            <p>
+                Este proyecto demuestra cómo la
+                programación web puede utilizarse
+                para analizar situaciones reales que
+                afectan a la economía familiar y al
+                abastecimiento de productos.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <h3>
+            Créditos
+        </h3>
+
+        <p>
+            Estudiante: Brandon Nina Ticona
+        </p>
+
+        <p>
+            Materia: Programación Web I
+        </p>
+
+        <p>
+            Gestión 2026
+        </p>
+
+        <p>
+            Repositorio Git:
+            <a href="#"
+                target="_blank">
+
+                Agregar enlace
+
+            </a>
+        </p>
+
+        <p>
+            Página publicada:
+            <a href="#"
+                target="_blank">
+
+                Agregar enlace
+
+            </a>
+        </p>
+
+    </footer>
+
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
